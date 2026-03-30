@@ -63,6 +63,177 @@ const siteData = {
       ],
     },
   ],
+  teachingSubjects: [
+    { code: "21900-1003", title: "การออกแบบและการจัดการฐานข้อมูล", hours: 3 },
+    { code: "21900-1004", title: "หลักการวิเคราะห์และออกแบบระบบเชิงวัตถุ", hours: 3 },
+    { code: "21901-2001", title: "ภาษาสอบถามข้อมูลเชิงโครงสร้างเบื้องต้น", hours: 3 },
+    { code: "21901-2006", title: "การโปรแกรมควบคุมอุปกรณ์", hours: 3 },
+    { code: "21901-2015", title: "การติดตั้งระบบเครือข่ายคอมพิวเตอร์เบื้องต้น", hours: 4 },
+    { code: "21909-2009", title: "การใช้งานแอปพลิเคชันปัญญาประดิษฐ์เบื้องต้น", hours: 4 },
+    { code: "21901-2013", title: "การออกแบบและพัฒนาเว็บไซต์", hours: 3 },
+    { code: "20001-2001", title: "คอมพิวเตอร์และสารสนเทศเพื่องานอาชีพ", hours: 3 },
+    { code: "20001-2001", title: "คอมพิวเตอร์และสารสนเทศเพื่องานอาชีพ", hours: 3 },
+    { code: "20000-2004", title: "กิจกรรมองค์การวิชาชีพ 1", hours: 2 },
+    { code: "20901-8501", title: "โครงงาน", hours: 4 },
+    { code: "20001-1003", title: "ธุรกิจเบื้องต้น", hours: 3 },
+  ],
+  teachingSchedule: [
+    {
+      day: "วันจันทร์",
+      sessions: [
+        {
+          period: "คาบ 2-4",
+          time: "09:00-12:00",
+          subject: "21901-2015 การติดตั้งระบบเครือข่ายคอมพิวเตอร์เบื้องต้น",
+          className: "ปวช. 1/1 (ปกติ), 1/2 (ทวิศึกษา), 1/3 (ทวิศึกษา) ทส.",
+          room: "ห้อง 221",
+        },
+        {
+          period: "คาบ 6-8",
+          time: "13:00-16:00",
+          subject: "21900-1003 การออกแบบและการจัดการฐานข้อมูล",
+          className: "ปวช. 1/1 (ปกติ), 1/2 (ทวิศึกษา), 1/3 (ทวิศึกษา) ทส.",
+          room: "ห้อง 221",
+        },
+        {
+          period: "คาบ 9-11",
+          time: "16:00-19:00",
+          subject: "21900-1004 หลักการวิเคราะห์และออกแบบระบบเชิงวัตถุ",
+          className: "ปวช. 1/1 (ปกติ), 1/2 (ทวิศึกษา), 1/3 (ทวิศึกษา) ทส.",
+          room: "ห้อง 221",
+        },
+      ],
+    },
+    {
+      day: "วันอังคาร",
+      sessions: [
+        {
+          period: "คาบ 2-3",
+          time: "09:00-11:00",
+          subject: "21901-2006 การโปรแกรมควบคุมอุปกรณ์",
+          className: "ปวช. 1/1 (ปกติ), 1/2 (ทวิศึกษา), 1/3 (ทวิศึกษา) ทส.",
+          room: "ห้อง 221",
+        },
+        {
+          period: "คาบ 4",
+          time: "11:00-12:00",
+          subject: "21901-2001 ภาษาสอบถามข้อมูลเชิงโครงสร้างเบื้องต้น",
+          className: "กลุ่มเรียนห้อง 221",
+          room: "ห้อง 221",
+        },
+        {
+          period: "คาบ 6-7",
+          time: "13:00-15:00",
+          subject: "21901-2001 ภาษาสอบถามข้อมูลเชิงโครงสร้างเบื้องต้น",
+          className: "ปวช. 1/1 (ปกติ), 1/2 (ทวิศึกษา), 1/3 (ทวิศึกษา) ทส.",
+          room: "ห้อง 221",
+        },
+        {
+          period: "คาบ 8-10",
+          time: "15:00-18:00",
+          subject: "21909-2009 การใช้งานแอปพลิเคชันปัญญาประดิษฐ์เบื้องต้น",
+          className: "ปวช. 1/1 (ปกติ), 1/2 (ทวิศึกษา), 1/3 (ทวิศึกษา) ทส.",
+          room: "ห้อง 221",
+        },
+      ],
+    },
+    {
+      day: "วันพุธ",
+      sessions: [
+        {
+          period: "คาบ 2-3",
+          time: "09:00-11:00",
+          subject: "20001-1003 ธุรกิจเบื้องต้น",
+          className: "ปวช. 2/1 ทส.",
+          room: "ห้อง 224",
+        },
+        {
+          period: "คาบ 6",
+          time: "13:00-14:00",
+          subject: "PLC",
+          className: "กิจกรรมพัฒนาวิชาชีพ",
+          room: "ตามมอบหมาย",
+        },
+        {
+          period: "คาบ 7",
+          time: "14:00-15:00",
+          subject: "20901-8501 โครงงาน",
+          className: "ปวช. 3/1 ทส.",
+          room: "ห้อง 226",
+        },
+        {
+          period: "คาบ 8-9",
+          time: "15:00-17:00",
+          subject: "20000-2004 กิจกรรมองค์การวิชาชีพ 1",
+          className: "ปวช. 2/1 ทส.",
+          room: "ห้อง 225",
+        },
+        {
+          period: "คาบ 10-11",
+          time: "17:00-19:00",
+          subject: "20901-8501 โครงงาน",
+          className: "ปวช. 3/1 ทวิ",
+          room: "ห้อง 226",
+        },
+      ],
+    },
+    {
+      day: "วันพฤหัสบดี",
+      sessions: [
+        {
+          period: "คาบ 2-3",
+          time: "09:00-11:00",
+          subject: "20001-2001 คอมพิวเตอร์และสารสนเทศเพื่องานอาชีพ",
+          className: "ปวช. 3/1 ชย.",
+          room: "ห้อง 226",
+        }
+      ],
+    },
+    {
+      day: "วันศุกร์",
+      sessions: [
+        {
+          period: "คาบ 2-3",
+          time: "09:00-11:00",
+          subject: "20001-2001 คอมพิวเตอร์และสารสนเทศเพื่องานอาชีพ",
+          className: "ปวช. 3/1 ชช.",
+          room: "ห้อง 321",
+        },
+        ,
+        {
+          period: "คาบ 7-8",
+          time: "14:00-16:00",
+          subject: "21901-2013 การออกแบบและพัฒนาเว็บไซต์",
+          className: "ปวช. 2/1 ทส.",
+          room: "ห้อง 225",
+        },
+        {
+          period: "คาบ 9",
+          time: "16:00-17:00",
+          subject: "Homeroom",
+          className: "ปวช. 2/1 ทส.",
+          room: "ห้อง 225",
+        }
+      ],
+    },
+  ],
+  additionalDuties: [
+    {
+      title: "ผู้ช่วยงานสื่อการเรียนการสอน",
+      description:
+        "สนับสนุนการจัดเตรียม พัฒนา และดูแลสื่อจัดทำสื่อวิดีทัศน์วิทยาลัยกับคณะกรรมการและอาจารย์",
+    },
+    {
+      title: "งานแผนงานและความร่วมมือ",
+      description:
+        "ร่วมดำเนินงานด้านแผนงาน โครงการ และการประสานความร่วมมือกับหน่วยงานที่เกี่ยวข้อง เพื่อสนับสนุนภารกิจและการพัฒนาของสถานศึกษา",
+    },
+    {
+      title: "ครูที่ปรึกษาชั้น ปวช. 2 เทคโนโลยีสารสนเทศ",
+      description:
+        "ดูแล ช่วยเหลือ ให้คำปรึกษา และติดตามพฤติกรรมการเรียนของนักเรียนระดับชั้น ปวช. 2 สาขาเทคโนโลยีสารสนเทศ ทั้งด้านการเรียน การประพฤติ และการพัฒนาศักยภาพรายบุคคล",
+    },
+  ],
   evaluation: [
     {
       id: "teaching",
@@ -187,6 +358,77 @@ function renderPortfolio() {
     .join("");
 }
 
+function renderTeachingSubjects() {
+  const tableBody = document.getElementById("teaching-table-body");
+  const totalHours = document.getElementById("teaching-total-hours");
+  const sumHours = siteData.teachingSubjects.reduce((total, item) => total + item.hours, 0);
+
+  if (totalHours) {
+    totalHours.textContent = `${sumHours} ชั่วโมง`;
+  }
+
+  tableBody.innerHTML = siteData.teachingSubjects
+    .map(
+      (item) => `
+        <tr>
+          <td>${item.code}</td>
+          <td>${item.title}</td>
+          <td>${item.hours}</td>
+        </tr>
+      `
+    )
+    .join("");
+}
+
+function renderTeachingSchedule() {
+  const container = document.getElementById("teaching-schedule-grid");
+  container.innerHTML = siteData.teachingSchedule
+    .map(
+      (day) => `
+        <div class="col-12 col-xl-6">
+          <article class="schedule-card">
+            <span class="schedule-day">${day.day}</span>
+            <div class="schedule-list">
+              ${day.sessions
+                .map(
+                  (session) => `
+                    <div class="schedule-item">
+                      <div class="schedule-item-top">
+                        <span class="schedule-period">${session.period} | ${session.time}</span>
+                        <span class="schedule-room">${session.room}</span>
+                      </div>
+                      <h4>${session.subject}</h4>
+                      <p class="schedule-meta">${session.className}</p>
+                    </div>
+                  `
+                )
+                .join("")}
+            </div>
+          </article>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderAdditionalDuties() {
+  const container = document.getElementById("duties-grid");
+  container.innerHTML = siteData.additionalDuties
+    .map(
+      (item) => `
+        <div class="col-12 col-md-6">
+          <article class="portfolio-card h-100">
+            <div class="portfolio-content">
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+            </div>
+          </article>
+        </div>
+      `
+    )
+    .join("");
+}
+
 function renderCertificates() {
   const container = document.getElementById("certificates-grid");
   container.innerHTML = siteData.certificates
@@ -257,12 +499,7 @@ function renderEvaluation(activeId) {
         </ul>
       </div>
       <div>
-        <h4 class="evaluation-list-title">หลักฐานประกอบ</h4>
-        <ul class="evaluation-resources">
-          ${activeItem.resources
-            .map((resource) => `<li class="evaluation-resource">${resource}</li>`)
-            .join("")}
-        </ul>
+        
       </div>
     </div>
   `;
@@ -325,6 +562,9 @@ function initDownloadButton() {
 
 renderStats();
 renderPortfolio();
+renderTeachingSubjects();
+renderTeachingSchedule();
+renderAdditionalDuties();
 renderEvaluation("teaching");
 renderCertificates();
 renderContacts();
