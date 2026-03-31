@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const siteData = {
   stats: [
     {
@@ -419,7 +421,7 @@ function renderAdditionalDuties() {
   container.innerHTML = siteData.additionalDuties
     .map(
       (item) => `
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <article class="portfolio-card h-100">
             <div class="portfolio-content">
               <h3>${item.title}</h3>
@@ -566,6 +568,10 @@ function initDownloadButton() {
 function initRevealAnimations() {
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
   if (!revealElements.length) return;
+  if (!("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
