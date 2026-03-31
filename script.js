@@ -172,7 +172,7 @@ const siteData = {
           period: "คาบ 10-11",
           time: "17:00-19:00",
           subject: "20901-8501 โครงงาน",
-          className: "ปวช. 3/1 ทวิ",
+          className: "ปวช. 3/1 ทส",
           room: "ห้อง 226",
         },
       ],
@@ -560,6 +560,58 @@ function initDownloadButton() {
   });
 }
 
+function initRevealAnimations() {
+  const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  if (!revealElements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+}
+
+function initParallaxScroll() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const parallaxElements = document.querySelectorAll(".parallax-soft");
+  if (!parallaxElements.length) return;
+
+  let ticking = false;
+
+  const updateParallax = () => {
+    const viewportHeight = window.innerHeight || 1;
+
+    parallaxElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+      const translateY = Math.max(-14, Math.min(14, centerOffset * -0.04));
+      element.style.transform = `translate3d(0, ${translateY}px, 0)`;
+    });
+
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  };
+
+  updateParallax();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+}
+
 renderStats();
 renderPortfolio();
 renderTeachingSubjects();
@@ -572,3 +624,5 @@ initTheme();
 initThemeToggle();
 initMenu();
 initDownloadButton();
+initRevealAnimations();
+initParallaxScroll();
