@@ -317,6 +317,9 @@ const mobileMenu = document.getElementById("mobile-menu");
 const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
 const downloadButton = document.getElementById("download-button");
 const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+const lightbox = document.getElementById("image-lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxClose = document.getElementById("lightbox-close");
 
 function renderStats() {
   const container = document.getElementById("stats-grid");
@@ -612,6 +615,51 @@ function initParallaxScroll() {
   window.addEventListener("resize", onScroll);
 }
 
+function initImageLightbox() {
+  if (!lightbox || !lightboxImage) return;
+
+  const triggers = document.querySelectorAll("[data-lightbox-src]");
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.setAttribute("src", "");
+    lightboxImage.setAttribute("alt", "");
+    document.body.style.overflow = "";
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const nestedImage = trigger.querySelector("img");
+      const imageSrc = nestedImage?.getAttribute("src") || trigger.dataset.lightboxSrc || "";
+      const imageAlt = nestedImage?.getAttribute("alt") || trigger.dataset.lightboxAlt || "";
+
+      lightboxImage.setAttribute("src", imageSrc);
+      lightboxImage.setAttribute("alt", imageAlt);
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", closeLightbox);
+  }
+
+  lightbox.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof HTMLElement && target.dataset.lightboxClose === "true") {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+}
+
 renderStats();
 renderPortfolio();
 renderTeachingSubjects();
@@ -626,3 +674,4 @@ initMenu();
 initDownloadButton();
 initRevealAnimations();
 initParallaxScroll();
+initImageLightbox();
